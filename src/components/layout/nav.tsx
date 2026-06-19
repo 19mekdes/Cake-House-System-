@@ -1,7 +1,7 @@
 
 function nav() {
   return (
-    <div>new nav bar </div>
+    <div>new nav bar for Mekdi  </div>
   )
 }
 
