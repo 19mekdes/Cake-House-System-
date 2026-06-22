@@ -8,7 +8,9 @@ function App() {
     <div className="min-h-screen bg-linear-to-br from-pink-50 via-yellow-50 to-rose-50 flex flex-col">
       
       <main className="grow">
+        <Nav />
         <HomePage />
+        <Footer />
       </main>
       
     </div>
