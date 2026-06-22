@@ -5,10 +5,10 @@ import Footer from '../components/layout/Footer';
 
 const HomePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-yellow-50 to-rose-50 flex flex-col">
+    <div className="min-h-screen bg-linear-to-br from-pink-50 via-yellow-50 to-rose-50 flex flex-col">
       <Navbar />
       
-      <main className="flex-grow container mx-auto px-4 py-12">
+      <main className="grow container mx-auto px-4 py-12">
         {/* Hero Section - Simple */}
         <div className="text-center py-12">
           <h1 className="text-5xl md:text-6xl font-cursive text-cake-primary mb-4">
@@ -58,7 +58,7 @@ const HomePage: React.FC = () => {
               { title: "New Customer", discount: "FREE SLICE", color: "from-blue-400 to-purple-400" },
               { title: "Birthday Month", discount: "20% OFF", color: "from-yellow-400 to-orange-400" }
             ].map((offer, index) => (
-              <div key={index} className={`bg-gradient-to-r ${offer.color} rounded-2xl p-8 text-white text-center shadow-xl`}>
+              <div key={index} className={`bg-linear-to-r ${offer.color} rounded-2xl p-8 text-white text-center shadow-xl`}>
                 <h3 className="text-2xl font-bold mb-2">{offer.title}</h3>
                 <div className="text-4xl font-bold">{offer.discount}</div>
               </div>

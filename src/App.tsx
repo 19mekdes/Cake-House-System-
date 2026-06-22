@@ -10,7 +10,7 @@ function App() {
       <main className="grow">
         <HomePage />
       </main>
-      
+   
     </div>
   );
 }
