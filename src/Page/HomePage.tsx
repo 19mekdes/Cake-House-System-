@@ -1,12 +1,10 @@
 // 📁 src/Page/HomePage.tsx
 import React from 'react';
-import Navbar from '../components/layout/nav';
-import Footer from '../components/layout/Footer';
 
 const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-linear-to-br from-pink-50 via-yellow-50 to-rose-50 flex flex-col">
-      <Navbar />
+      
       
       <main className="grow container mx-auto px-4 py-12">
         {/* Hero Section - Simple */}
@@ -87,7 +85,6 @@ const HomePage: React.FC = () => {
         </div>
       </main>
 
-      <Footer />
     </div>
   );
 };
