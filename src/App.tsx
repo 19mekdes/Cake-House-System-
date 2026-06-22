@@ -1,16 +1,18 @@
+
 import Nav from './components/layout/nav';
+import HomePage from './Page/HomePage';
+import Footer from './components/layout/Footer';
 
 function App() {
   return (
-    <div>
-      <Nav />
-      <h1 className="text-3xl font-bold underline">
-    Hello world!
-  </h1>
- <h1> this is Nati & Mekdi </h1>
-
+    <div className="min-h-screen bg-linear-to-br from-pink-50 via-yellow-50 to-rose-50 flex flex-col">
+      
+      <main className="grow">
+        <HomePage />
+      </main>
+      
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
