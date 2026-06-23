@@ -1,6 +1,4 @@
 import React from 'react';
-
-// Define the shape of the data the card will receive
 interface CardProps {
   title: string;
   price: string;

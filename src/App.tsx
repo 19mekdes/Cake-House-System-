@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-linear-to-br from-pink-50 via-yellow-50 to-rose-50 flex flex-col">
-        <Nav /> {/* Nav stays outside Routes so it's always visible */}
+        <Nav /> 
         
         <main className="grow">
           {/* 2. Define your routes here */}
@@ -18,7 +18,7 @@ function App() {
           </Routes>
         </main>
         
-        <Footer /> {/* Footer stays outside Routes so it's always visible */}
+        <Footer /> 
       </div>
     </Router>
   );
