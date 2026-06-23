@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Nav: React.FC = () => {
   return (
     <nav className="bg-orange-50 p-4 shadow-md">
