@@ -1,4 +1,3 @@
-// 📁 src/Page/HomePage.tsx
 import React from 'react';
 
 const HomePage: React.FC = () => {

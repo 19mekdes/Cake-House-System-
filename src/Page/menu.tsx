@@ -1,5 +1,4 @@
 import Card from '../components/cards/card';
-
 const menuItems = [
   { id: 1, title: "Chocolate Cake", price: "$25.00", image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500" },
   { id: 2, title: "Strawberry Cupcake", price: "$5.00", image: "https://images.unsplash.com/photo-1587668178277-295251f90016?w=500" },
