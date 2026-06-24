@@ -19,18 +19,28 @@ interface Cake {
 interface FeaturedCakesProps {
   onAddToCart?: (cake: Cake) => void;
   onQuickView?: (cake: Cake) => void;
-  onViewAll?: () => void;  // ← ADD THIS PROP
+  onViewAll?: () => void;
 }
 
 const FeaturedCakes: React.FC<FeaturedCakesProps> = ({ 
   onAddToCart, 
   onQuickView,
-  onViewAll  // ← RECEIVE THE PROP
+  onViewAll
 }) => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const [notification, setNotification] = useState<string | null>(null);
+  
+  // ✅ Safely use cart context
+  try {
+  
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  } catch (error) {
+    console.warn('Cart context not available, using fallback');
+  }
 
-  // Cake data with beautiful images
+  // OR use it directly with error handling:
+  // const { isInCart } = useCart();
+
   const cakes: Cake[] = [
     {
       id: 1,
@@ -60,7 +70,7 @@ const FeaturedCakes: React.FC<FeaturedCakesProps> = ({
       id: 3,
       name: "Vanilla Paradise",
       price: "$30.00",
-      image: "https://images.unsplash.com/photo-1586788684334-913ee8e8d1b0?w=400&h=400&fit=crop&crop=center",
+      image: "https://i.pinimg.com/1200x/52/00/eb/5200eb70b472324cf6978bbc10aac5be.jpg",
       rating: 4.7,
       reviews: 84,
       description: "Classic vanilla with buttercream",
@@ -71,7 +81,7 @@ const FeaturedCakes: React.FC<FeaturedCakesProps> = ({
       id: 4,
       name: "Red Velvet Dream",
       price: "$38.00",
-      image: "https://images.unsplash.com/photo-1614707267537-b85a0c2ae708?w=400&h=400&fit=crop&crop=center",
+      image: "https://i.pinimg.com/736x/3f/ed/03/3fed031005e9753f12cfda2500ddd246.jpg",
       rating: 4.9,
       reviews: 156,
       description: "Cream cheese frosting delight",
@@ -84,7 +94,9 @@ const FeaturedCakes: React.FC<FeaturedCakesProps> = ({
   const handleAddToCart = (cake: Cake) => {
     setNotification(`🎉 Added ${cake.name} to cart!`);
     setTimeout(() => setNotification(null), 3000);
-    if (onAddToCart) onAddToCart(cake);
+    if (onAddToCart) {
+      onAddToCart(cake);
+    }
   };
 
   const handleQuickView = (cake: Cake) => {
@@ -268,7 +280,7 @@ const FeaturedCakes: React.FC<FeaturedCakesProps> = ({
           ))}
         </div>
 
-        {/* View All Button - UPDATED with onViewAll */}
+        {/* View All Button */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -278,7 +290,7 @@ const FeaturedCakes: React.FC<FeaturedCakesProps> = ({
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={onViewAll}  // ← ADD THIS
+            onClick={onViewAll}
             className="px-8 py-4 bg-linear-to-r from-pink-500 to-red-500 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
           >
             View All Cakes

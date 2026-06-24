@@ -1,20 +1,16 @@
 // src/Page/HomePage.tsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { useCart } from '../context/CartContext';
 // Import Components
 import Hero from '../components/homepage/Hero';
 import FeaturedCakes from '../components/homepage/FeaturedCakes';
 import Testimonials from '../components/homepage/Testimonials';
 
-// Import Types
-// Import Types
-import type { Cake } from '../types';
-
 const HomePage: React.FC = () => {
   const navigate = useNavigate();
+  const { addToCart } = useCart();  // ← Get addToCart from context
 
-  // Navigation Handlers
   const handleOrderNow = () => {
     navigate('/order');
   };
@@ -24,14 +20,11 @@ const HomePage: React.FC = () => {
   };
 
   const handleViewAllCakes = () => {
-    navigate('/menu');  // ← Navigate to menu page
+    navigate('/menu');
   };
 
-  const handleAddToCart = (cake: Cake) => {
-    console.log('Added to cart:', cake);
-  };
-
-  const handleQuickView = (cake: Cake) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleQuickView = (cake: any) => {
     console.log('Quick view:', cake);
     navigate(`/cake/${cake.id}`);
   };
@@ -44,9 +37,9 @@ const HomePage: React.FC = () => {
           onViewMenu={handleViewMenu}
         />
         <FeaturedCakes 
-          onAddToCart={handleAddToCart}
+          onAddToCart={addToCart}  // ← Pass addToCart from context
           onQuickView={handleQuickView}
-          onViewAll={handleViewAllCakes}  // ← PASS THIS PROP
+          onViewAll={handleViewAllCakes}
         />
         <Testimonials />
       </main>

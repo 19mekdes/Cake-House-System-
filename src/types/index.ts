@@ -13,6 +13,10 @@ export interface Cake {
   badge?: string | null;
 }
 
+export interface CartItem extends Cake {
+  quantity: number;
+}
+
 export interface Testimonial {
   id: number;
   name: string;
