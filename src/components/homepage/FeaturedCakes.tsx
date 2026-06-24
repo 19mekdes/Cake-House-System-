@@ -19,11 +19,13 @@ interface Cake {
 interface FeaturedCakesProps {
   onAddToCart?: (cake: Cake) => void;
   onQuickView?: (cake: Cake) => void;
+  onViewAll?: () => void;  // ← ADD THIS PROP
 }
 
 const FeaturedCakes: React.FC<FeaturedCakesProps> = ({ 
   onAddToCart, 
-  onQuickView 
+  onQuickView,
+  onViewAll  // ← RECEIVE THE PROP
 }) => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const [notification, setNotification] = useState<string | null>(null);
@@ -266,7 +268,7 @@ const FeaturedCakes: React.FC<FeaturedCakesProps> = ({
           ))}
         </div>
 
-        {/* View All Button */}
+        {/* View All Button - UPDATED with onViewAll */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -276,6 +278,7 @@ const FeaturedCakes: React.FC<FeaturedCakesProps> = ({
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={onViewAll}  // ← ADD THIS
             className="px-8 py-4 bg-linear-to-r from-pink-500 to-red-500 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
           >
             View All Cakes
