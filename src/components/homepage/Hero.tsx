@@ -21,7 +21,7 @@ const Hero: React.FC<HeroProps> = ({ onOrderNow, onViewMenu }) => {
         }}
       >
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/50 to-black/30"></div>
       </div>
 
       {/* Decorative Floating Cake Images */}
@@ -137,7 +137,7 @@ const Hero: React.FC<HeroProps> = ({ onOrderNow, onViewMenu }) => {
             className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-cursive text-white mb-6 leading-tight"
           >
             Welcome to{' '}
-            <span className="text-gradient bg-gradient-to-r from-pink-400 via-yellow-300 to-orange-400 bg-clip-text text-transparent">
+            <span className="text-gradient bg-linear-to-r from-pink-400 via-yellow-300 to-orange-400 bg-clip-text text-transparent">
               Cake House
             </span>
           </motion.h1>
@@ -162,7 +162,7 @@ const Hero: React.FC<HeroProps> = ({ onOrderNow, onViewMenu }) => {
           >
             <button
               onClick={onOrderNow}
-              className="px-8 py-4 bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white rounded-full font-semibold 
+              className="px-8 py-4 bg-linear-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white rounded-full font-semibold 
                        shadow-2xl shadow-pink-500/30 hover:shadow-pink-500/50 
                        transition-all duration-300 transform hover:scale-105 
                        flex items-center gap-2 group"
@@ -199,7 +199,7 @@ const Hero: React.FC<HeroProps> = ({ onOrderNow, onViewMenu }) => {
             ].map((stat, index) => (
               <div
                 key={index}
-                className={`bg-gradient-to-br ${stat.color} backdrop-blur-md rounded-2xl p-4 text-center border border-white/20`}
+                className={`bg-linear-to-br ${stat.color} backdrop-blur-md rounded-2xl p-4 text-center border border-white/20`}
               >
                 <div className="flex items-center justify-center gap-2">
                   <span className="text-2xl">{stat.icon}</span>
@@ -215,7 +215,7 @@ const Hero: React.FC<HeroProps> = ({ onOrderNow, onViewMenu }) => {
       </div>
 
       {/* Bottom Gradient Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/20 to-transparent z-5"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-black/20 to-transparent z-5"></div>
     </section>
   );
 };

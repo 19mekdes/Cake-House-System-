@@ -90,7 +90,7 @@ const FeaturedCakes: React.FC<FeaturedCakesProps> = ({
   };
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-white to-pink-50">
+    <section className="py-20 px-4 bg-linear-to-br from-white to-pink-50">
       <div className="container mx-auto">
         {/* Section Header */}
         <motion.div
@@ -108,7 +108,7 @@ const FeaturedCakes: React.FC<FeaturedCakesProps> = ({
             🎂
           </motion.div>
           <h2 className="text-4xl md:text-5xl font-cursive mb-4">
-            Our <span className="text-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-orange-500 bg-clip-text text-transparent">Featured Cakes</span>
+            Our <span className="text-gradient bg-linear-to-r from-pink-500 via-purple-500 to-orange-500 bg-clip-text text-transparent">Featured Cakes</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
             Discover our most popular cakes, crafted with love and the finest ingredients.
@@ -123,7 +123,7 @@ const FeaturedCakes: React.FC<FeaturedCakesProps> = ({
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: 100, opacity: 0 }}
-              className="fixed bottom-6 right-6 bg-gradient-to-r from-pink-500 to-red-500 text-white px-6 py-4 rounded-2xl shadow-2xl z-50 flex items-center gap-3"
+              className="fixed bottom-6 right-6 bg-linear-to-r from-pink-500 to-red-500 text-white px-6 py-4 rounded-2xl shadow-2xl z-50 flex items-center gap-3"
             >
               <span className="text-2xl">🎉</span>
               <span className="font-semibold">{notification}</span>
@@ -145,7 +145,7 @@ const FeaturedCakes: React.FC<FeaturedCakesProps> = ({
               className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
             >
               {/* Image Container */}
-              <div className="relative overflow-hidden h-64 bg-gradient-to-br from-pink-100 to-purple-100">
+              <div className="relative overflow-hidden h-64 bg-linear-to-br from-pink-100 to-purple-100">
                 <img
                   src={cake.image}
                   alt={cake.name}
@@ -153,7 +153,7 @@ const FeaturedCakes: React.FC<FeaturedCakesProps> = ({
                 />
                 
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                 {/* Badge */}
                 {cake.badge && (
@@ -163,7 +163,7 @@ const FeaturedCakes: React.FC<FeaturedCakesProps> = ({
                     transition={{ type: "spring", stiffness: 260, damping: 20 }}
                     className="absolute top-4 left-4 z-10"
                   >
-                    <span className="bg-gradient-to-r from-pink-500 to-red-500 text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg">
+                    <span className="bg-linear-to-r from-pink-500 to-red-500 text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg">
                       {cake.badge}
                     </span>
                   </motion.div>
@@ -172,7 +172,7 @@ const FeaturedCakes: React.FC<FeaturedCakesProps> = ({
                 {/* New Badge */}
                 {cake.isNew && (
                   <div className="absolute top-4 right-4 z-10">
-                    <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg">
+                    <span className="bg-linear-to-r from-green-400 to-emerald-500 text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg">
                       ✨ New
                     </span>
                   </div>
@@ -196,7 +196,7 @@ const FeaturedCakes: React.FC<FeaturedCakesProps> = ({
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={() => handleAddToCart(cake)}
-                    className="bg-gradient-to-r from-pink-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg hover:shadow-xl transition-shadow"
+                    className="bg-linear-to-r from-pink-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg hover:shadow-xl transition-shadow"
                   >
                     Add to Cart
                   </motion.button>
@@ -238,7 +238,7 @@ const FeaturedCakes: React.FC<FeaturedCakesProps> = ({
                   </div>
                   <button
                     onClick={() => handleAddToCart(cake)}
-                    className="bg-gradient-to-r from-pink-500 to-red-500 text-white p-3 rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+                    className="bg-linear-to-r from-pink-500 to-red-500 text-white p-3 rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105"
                     aria-label={`Add ${cake.name} to cart`}
                   >
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -255,7 +255,7 @@ const FeaturedCakes: React.FC<FeaturedCakesProps> = ({
                         initial={{ width: 0 }}
                         whileInView={{ width: '85%' }}
                         transition={{ duration: 1, delay: 0.5 }}
-                        className="h-1.5 rounded-full bg-gradient-to-r from-pink-500 to-red-500"
+                        className="h-1.5 rounded-full bg-linear-to-r from-pink-500 to-red-500"
                       ></motion.div>
                     </div>
                     <p className="text-xs text-gray-400 mt-1">🔥 Popular choice</p>
@@ -276,7 +276,7 @@ const FeaturedCakes: React.FC<FeaturedCakesProps> = ({
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
+            className="px-8 py-4 bg-linear-to-r from-pink-500 to-red-500 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
           >
             View All Cakes
             <span className="text-xl">→</span>

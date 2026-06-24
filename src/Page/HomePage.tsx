@@ -34,8 +34,8 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-yellow-50 to-rose-50 flex flex-col">
-      <main className="flex-grow">
+    <div className="min-h-screen bg-linear-to-br from-pink-50 via-yellow-50 to-rose-50 flex flex-col">
+      <main className="grow">
         <Hero 
           onOrderNow={handleOrderNow}
           onViewMenu={handleViewMenu}

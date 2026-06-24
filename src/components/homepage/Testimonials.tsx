@@ -1,6 +1,6 @@
 // src/components/homepage/Testimonials.tsx
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 interface Testimonial {
   id: number;
@@ -22,7 +22,8 @@ const Testimonials: React.FC<TestimonialsProps> = ({
   title = "What Our Customers Say",
   subtitle = "Real reviews from real people who love our cakes"
 }) => {
-  const [activeIndex, setActiveIndex] = useState<number>(0);
+  // eslint-disable-next-line no-empty-pattern
+  const [] = useState<number>(0);
 
   const testimonials: Testimonial[] = [
     {
@@ -85,7 +86,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({
   const averageRating = testimonials.reduce((acc, curr) => acc + curr.rating, 0) / testimonials.length;
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-pink-50 via-white to-yellow-50">
+    <section className="py-20 px-4 bg-linear-to-br from-pink-50 via-white to-yellow-50">
       <div className="container mx-auto">
         {/* Section Header */}
         <motion.div
@@ -142,7 +143,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({
               {/* Avatar and Name */}
               <div className="flex items-center gap-4 mb-4">
                 <div className="relative">
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-r from-pink-400 to-red-400 flex items-center justify-center text-3xl shadow-lg">
+                  <div className="w-14 h-14 rounded-full bg-linear-to-r from-pink-400 to-red-400 flex items-center justify-center text-3xl shadow-lg">
                     {testimonial.avatar}
                   </div>
                   <div className="absolute -bottom-1 -right-1 bg-green-400 rounded-full w-4 h-4 border-2 border-white"></div>
@@ -222,7 +223,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({
           className="mt-12 text-center"
         >
           <p className="text-gray-600 mb-4">Join our happy customers today!</p>
-          <button className="px-8 py-3 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+          <button className="px-8 py-3 bg-linear-to-r from-pink-500 to-red-500 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
             Leave a Review ⭐
           </button>
         </motion.div>
