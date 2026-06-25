@@ -100,7 +100,7 @@ const About: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-yellow-50">
+    <div className="min-h-screen bg-linear-to-br from-pink-50 via-white to-yellow-50">
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div 
@@ -111,7 +111,7 @@ const About: React.FC = () => {
             backgroundPosition: 'center',
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-50/80 to-yellow-50/80 z-0"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-pink-50/80 to-yellow-50/80 z-0"></div>
         
         <div className="container mx-auto relative z-10">
           <motion.div
@@ -129,7 +129,7 @@ const About: React.FC = () => {
               🎂
             </motion.div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-cursive mb-6">
-              About <span className="text-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-orange-500 bg-clip-text text-transparent">Cake House</span>
+              About <span className="text-gradient bg-linear-to-r from-pink-500 via-purple-500 to-orange-500 bg-clip-text text-transparent">Cake House</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               We're passionate about creating delicious, handcrafted cakes that bring joy to every occasion. 
@@ -184,7 +184,7 @@ const About: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-pink-50 to-yellow-50 rounded-3xl p-8 md:p-12"
+            className="bg-linear-to-br from-pink-50 to-yellow-50 rounded-3xl p-8 md:p-12"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
@@ -258,7 +258,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Team Section - WITH LOCAL IMAGES */}
-      <section className="py-16 px-4 bg-gradient-to-br from-pink-50 to-yellow-50">
+      <section className="py-16 px-4 bg-linear-to-br from-pink-50 to-yellow-50">
         <div className="container mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -285,7 +285,7 @@ const About: React.FC = () => {
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
               >
                 {/* Image Container */}
-                <div className="relative overflow-hidden h-64 bg-gradient-to-br from-pink-100 to-purple-100">
+                <div className="relative overflow-hidden h-64 bg-linear-to-br from-pink-100 to-purple-100">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -335,7 +335,7 @@ const About: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-pink-500 to-red-500 rounded-3xl p-8 md:p-12 text-center text-white"
+            className="bg-linear-to-r from-pink-500 to-red-500 rounded-3xl p-8 md:p-12 text-center text-white"
           >
             <h2 className="text-3xl md:text-4xl font-cursive mb-4">
               Ready to Order? 🎂
