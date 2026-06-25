@@ -12,7 +12,7 @@ const HomePage: React.FC = () => {
   const { addToCart } = useCart();  // ← Get addToCart from context
 
   const handleOrderNow = () => {
-    navigate('/order');
+    navigate('/menu');
   };
 
   const handleViewMenu = () => {
