@@ -29,6 +29,9 @@ const Nav: React.FC = () => {
             <li className="hover:text-pink-500 transition-colors">
               <Link to="/about">About Us</Link>
             </li>
+            <li className="hover:text-pink-500 transition-colors">
+              <Link to="/contact">Contact</Link>
+            </li>
           </ul>
 
           {/* Cart Button */}

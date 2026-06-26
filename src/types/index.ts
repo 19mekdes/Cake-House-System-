@@ -32,6 +32,12 @@ export interface TeamMember {
   role: string;
   bio: string;
   emoji: string;
+  image?: string;
+  social?: {
+    instagram?: string;
+    twitter?: string;
+    linkedin?: string;
+  };
 }
 
 export interface ContactFormData {
