@@ -1,6 +1,6 @@
-// src/Page/About.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';  // ← Add this import
 
 // Import local images
 import natiImage from '../assets/nati.jpg';
@@ -13,7 +13,7 @@ interface TeamMember {
   name: string;
   role: string;
   bio: string;
-  image: string;  // ← Changed from emoji to image
+  image: string;
   social?: {
     instagram?: string;
     twitter?: string;
@@ -22,13 +22,28 @@ interface TeamMember {
 }
 
 const About: React.FC = () => {
+  const navigate = useNavigate();  // ← Add this
+
+  // Navigation Handlers
+  const handleOrderNow = () => {
+    navigate('/menu');  // ← Navigate to menu page
+  };
+
+  const handleContactUs = () => {
+    navigate('/contact');  // ← Navigate to contact page (create if needed)
+    // OR if you don't have contact page yet:
+    // alert('Contact page coming soon! 📞');
+    // OR navigate to home:
+    // navigate('/');
+  };
+
   const teamMembers: TeamMember[] = [
     {
       id: 1,
       name: "Nati",
       role: "Head Baker & Founder",
       bio: "With over 15 years of baking experience, Nati creates magical cakes that delight customers. Trained in Paris and London, he brings world-class expertise to every creation.",
-      image: natiImage,  // ← Local image
+      image: natiImage,
       social: {
         instagram: "@nati_bakes",
         twitter: "@nati_cakes"
@@ -39,7 +54,7 @@ const About: React.FC = () => {
       name: "Mekdi",
       role: "Pastry Chef",
       bio: "Mekdi specializes in creating beautiful and delicious pastries that are almost too pretty to eat. Her attention to detail and passion for perfection is unmatched.",
-      image: mekdiImage,  // ← Local image
+      image: mekdiImage,
       social: {
         instagram: "@mekdi_pastry",
         twitter: "@mekdi_sweets"
@@ -49,11 +64,11 @@ const About: React.FC = () => {
       id: 3,
       name: "Ayenu",
       role: "Cake Designer",
-      bio: "Sarah brings creativity and artistry to every cake, making each one a unique masterpiece. Her designs have been featured in top wedding magazines.",
-      image: sarahImage,  // ← Local image
+      bio: "Ayenu brings creativity and artistry to every cake, making each one a unique masterpiece. Her designs have been featured in top wedding magazines.",
+      image: sarahImage,
       social: {
-        instagram: "@sarah_cakedesign",
-        linkedin: "sarah-designs"
+        instagram: "@ayenu_cakedesign",
+        linkedin: "ayenu-designs"
       }
     },
     {
@@ -61,7 +76,7 @@ const About: React.FC = () => {
       name: "David",
       role: "Quality Control",
       bio: "David ensures every cake meets our high standards of quality and taste. With a background in food science, he guarantees excellence in every bite.",
-      image: davidImage,  // ← Local image
+      image: davidImage,
       social: {
         instagram: "@david_qc",
         twitter: "@david_quality"
@@ -257,7 +272,7 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Team Section - WITH LOCAL IMAGES */}
+      {/* Team Section */}
       <section className="py-16 px-4 bg-linear-to-br from-pink-50 to-yellow-50">
         <div className="container mx-auto max-w-6xl">
           <motion.div
@@ -291,7 +306,6 @@ const About: React.FC = () => {
                     alt={member.name}
                     className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
                   />
-                  {/* Online Status Badge */}
                   <div className="absolute bottom-3 right-3 bg-green-400 rounded-full w-3 h-3 border-2 border-white"></div>
                 </div>
                 
@@ -301,7 +315,6 @@ const About: React.FC = () => {
                   <p className="text-pink-500 text-sm font-medium mb-3">{member.role}</p>
                   <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
                   
-                  {/* Social Links */}
                   {member.social && (
                     <div className="mt-4 flex justify-center gap-3">
                       {member.social.instagram && (
@@ -328,7 +341,7 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - WITH FUNCTIONALITY */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl">
           <motion.div
@@ -344,12 +357,25 @@ const About: React.FC = () => {
               Let us make your next celebration extra special with our delicious cakes.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <button className="bg-white text-pink-500 px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              {/* Order Now Button - Navigates to Menu */}
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={handleOrderNow}  // ← Navigates to /menu
+                className="bg-white text-pink-500 px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              >
                 Order Now
-              </button>
-              <button className="bg-white/20 backdrop-blur-sm text-white px-8 py-3 rounded-full font-semibold border border-white/30 hover:bg-white/30 transition-all duration-300">
+              </motion.button>
+              
+              {/* Contact Us Button */}
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={handleContactUs}  // ← Navigates to /contact
+                className="bg-white/20 backdrop-blur-sm text-white px-8 py-3 rounded-full font-semibold border border-white/30 hover:bg-white/30 transition-all duration-300"
+              >
                 Contact Us
-              </button>
+              </motion.button>
             </div>
           </motion.div>
         </div>
