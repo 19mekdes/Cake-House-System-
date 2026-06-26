@@ -4,8 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useCart } from '../context/CartContext';
 import Card from '../components/cards/card';
-
-// Import Types
+import { menuItems } from './menu';  // ← Import menu data directly
 import type { Cake } from '../types';
 
 const HomePage: React.FC = () => {
@@ -25,63 +24,14 @@ const HomePage: React.FC = () => {
     navigate('/menu');
   };
 
-  
 
   const handleQuickView = (cake: Cake) => {
     console.log('Quick view:', cake);
     navigate(`/cake/${cake.id}`);
   };
 
-  // Sample cake data matching the Card component's expected structure
-  const previewCakes: Cake[] = [
-    { 
-      id: 1, 
-      name: "Chocolate Dream", 
-      price: "$35.00", 
-      image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400&h=400&fit=crop", 
-      rating: 4.9, 
-      reviews: 128,
-      description: "Rich chocolate cake with silky ganache",
-      category: "chocolate",
-      isPopular: true,
-      badge: "⭐ Best Seller"
-    },
-    { 
-      id: 2, 
-      name: "Strawberry Bliss", 
-      price: "$40.00", 
-      image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=400&fit=crop", 
-      rating: 4.8, 
-      reviews: 96,
-      description: "Fresh strawberries with creamy frosting",
-      category: "fruit",
-      isNew: true,
-      badge: "✨ New"
-    },
-    { 
-      id: 3, 
-      name: "Vanilla Paradise", 
-      price: "$30.00", 
-      image: "https://images.unsplash.com/photo-1586788684334-913ee8e8d1b0?w=400&h=400&fit=crop", 
-      rating: 4.7, 
-      reviews: 84,
-      description: "Classic vanilla with buttercream",
-      category: "classic",
-      badge: null
-    },
-    { 
-      id: 4, 
-      name: "Red Velvet Dream", 
-      price: "$38.00", 
-      image: "https://images.unsplash.com/photo-1614707267537-b85a0c2ae708?w=400&h=400&fit=crop", 
-      rating: 4.9, 
-      reviews: 156,
-      description: "Cream cheese frosting delight",
-      category: "classic",
-      isPopular: true,
-      badge: "❤️ Customer Favorite"
-    }
-  ];
+  // Get first 4 cakes for homepage preview
+  const previewCakes = menuItems.slice(0, 4);
 
   // Testimonials data
   const testimonials = [
@@ -229,11 +179,11 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* Bottom Gradient */}
-          <div className="absolute bottom-0 left-0 right-0 h-32 bg-Linear-to-t from-black/20 to-transparent z-5"></div>
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-black/20 to-transparent z-5"></div>
         </section>
 
         {/* ============================================================ */}
-        {/* POPULAR CAKES SECTION - USING CARD COMPONENT */}
+        {/* POPULAR CAKES SECTION - USING MENU DATA */}
         {/* ============================================================ */}
         <section className="py-16 px-4 bg-white">
           <div className="container mx-auto max-w-6xl">
