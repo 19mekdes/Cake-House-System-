@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useCart } from '../context/CartContext';
 import Card from '../components/cards/card';
-import { menuItems } from './menu';  // ← Import menu data directly
+import { menuItems } from './menu';  
 import type { Cake } from '../types';
 
 const HomePage: React.FC = () => {
