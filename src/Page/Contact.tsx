@@ -41,14 +41,14 @@ const Contact: React.FC = () => {
   };
 
   const contactInfo = [
-    { icon: '📍', label: 'Address', value: '123 Cake Street, Sweet City, SC 12345' },
+    { icon: '📍', label: 'Address', value: '123 Cake Street, Addis Abeba' },
     { icon: '📞', label: 'Phone', value: '+1 (234) 567-8900' },
     { icon: '✉️', label: 'Email', value: 'info@cakehouse.com' },
     { icon: '🕐', label: 'Hours', value: 'Mon-Sat: 9:00 AM - 9:00 PM' }
   ];
 
   return (
-    <div className="min-h-screen py-12 px-4 bg-gradient-to-br from-pink-50 via-white to-yellow-50">
+    <div className="min-h-screen py-12 px-4 bg-linear-to-br from-pink-50 via-white to-yellow-50">
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
         <motion.div
@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
             📬
           </motion.div>
           <h1 className="text-5xl md:text-6xl font-cursive mb-4">
-            Contact <span className="text-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-orange-500 bg-clip-text text-transparent">Us</span>
+            Contact <span className="text-gradient bg-linear-to-r from-pink-500 via-purple-500 to-orange-500 bg-clip-text text-transparent">Us</span>
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
             Have a question or want to place a custom order? We'd love to hear from you!
@@ -163,7 +163,7 @@ const Contact: React.FC = () => {
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-gradient-to-r from-pink-500 to-red-500 text-white py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-linear-to-r from-pink-500 to-red-500 text-white py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message ✉️'}
               </motion.button>
@@ -177,7 +177,7 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="space-y-6"
           >
-            <div className="bg-gradient-to-br from-pink-50 to-yellow-50 rounded-2xl p-8">
+            <div className="bg-linear-to-br from-pink-50 to-yellow-50 rounded-2xl p-8">
               <h2 className="text-2xl font-bold mb-6">Get in Touch 📬</h2>
               
               {contactInfo.map((info, index) => (
@@ -218,7 +218,7 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Social Links */}
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8">
+            <div className="bg-linear-to-br from-purple-50 to-pink-50 rounded-2xl p-8">
               <h3 className="text-xl font-bold mb-4">Follow Us 📱</h3>
               <div className="flex gap-4">
                 <motion.a

@@ -10,7 +10,7 @@ import type { Cake } from '../types';
 
 const HomePage: React.FC = () => {
   const navigate = useNavigate();
-  const { addToCart } = useCart();
+  useCart();
 
   // Navigation Handlers
   const handleOrderNow = () => {
@@ -25,10 +25,7 @@ const HomePage: React.FC = () => {
     navigate('/menu');
   };
 
-  const handleAddToCart = (cake: Cake) => {
-    addToCart(cake);
-    console.log('Added to cart:', cake);
-  };
+  
 
   const handleQuickView = (cake: Cake) => {
     console.log('Quick view:', cake);
@@ -94,8 +91,8 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-yellow-50 to-rose-50 flex flex-col">
-      <main className="flex-grow">
+    <div className="min-h-screen bg-linear-to-br from-pink-50 via-yellow-50 to-rose-50 flex flex-col">
+      <main className="grow">
         {/* ============================================================ */}
         {/* HERO SECTION */}
         {/* ============================================================ */}
@@ -164,7 +161,7 @@ const HomePage: React.FC = () => {
                 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-cursive text-white mb-6 leading-tight"
               >
                 Welcome to{' '}
-                <span className="text-gradient bg-gradient-to-r from-pink-400 via-yellow-300 to-orange-400 bg-clip-text text-transparent">
+                <span className="text-gradient bg-linear-to-r from-pink-400 via-yellow-300 to-orange-400 bg-clip-text text-transparent">
                   Cake House
                 </span>
               </motion.h1>
@@ -187,7 +184,7 @@ const HomePage: React.FC = () => {
               >
                 <button
                   onClick={handleOrderNow}
-                  className="px-8 py-4 bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white rounded-full font-semibold shadow-2xl shadow-pink-500/30 hover:shadow-pink-500/50 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 group"
+                  className="px-8 py-4 bg-linear-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white rounded-full font-semibold shadow-2xl shadow-pink-500/30 hover:shadow-pink-500/50 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 group"
                 >
                   Order Now
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -232,7 +229,7 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* Bottom Gradient */}
-          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/20 to-transparent z-5"></div>
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-Linear-to-t from-black/20 to-transparent z-5"></div>
         </section>
 
         {/* ============================================================ */}
@@ -255,7 +252,7 @@ const HomePage: React.FC = () => {
                 🍰
               </motion.div>
               <h2 className="text-3xl md:text-4xl font-cursive mb-4">
-                Popular <span className="text-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-orange-500 bg-clip-text text-transparent">Cakes</span>
+                Popular <span className="text-gradient bg-linear-to-r from-pink-500 via-purple-500 to-orange-500 bg-clip-text text-transparent">Cakes</span>
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto text-lg">
                 Discover our most loved cakes, crafted with love and the finest ingredients.
@@ -277,7 +274,7 @@ const HomePage: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleViewAllCakes}
-                className="px-8 py-3 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
+                className="px-8 py-3 bg-linear-to-r from-pink-500 to-red-500 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
               >
                 View All Cakes
                 <span className="text-xl">→</span>
@@ -289,7 +286,7 @@ const HomePage: React.FC = () => {
         {/* ============================================================ */}
         {/* TESTIMONIALS SECTION */}
         {/* ============================================================ */}
-        <section className="py-20 px-4 bg-gradient-to-br from-pink-50 via-white to-yellow-50">
+        <section className="py-20 px-4 bg-linear-to-br from-pink-50 via-white to-yellow-50">
           <div className="container mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -306,7 +303,7 @@ const HomePage: React.FC = () => {
                 ⭐
               </motion.div>
               <h2 className="text-4xl md:text-5xl font-cursive mb-4">
-                What Our <span className="text-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-orange-500 bg-clip-text text-transparent">Customers Say</span>
+                What Our <span className="text-gradient bg-linear-to-r from-pink-500 via-purple-500 to-orange-500 bg-clip-text text-transparent">Customers Say</span>
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto text-lg">
                 Real reviews from real people who love our cakes.
@@ -325,7 +322,7 @@ const HomePage: React.FC = () => {
                 >
                   <div className="absolute top-4 right-4 text-6xl opacity-10 text-pink-500">❝</div>
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-14 h-14 rounded-full bg-gradient-to-r from-pink-400 to-red-400 flex items-center justify-center text-3xl shadow-lg">
+                    <div className="w-14 h-14 rounded-full bg-linear-to-r from-pink-400 to-red-400 flex items-center justify-center text-3xl shadow-lg">
                       {testimonial.avatar}
                     </div>
                     <div>
@@ -353,7 +350,7 @@ const HomePage: React.FC = () => {
         {/* ============================================================ */}
         {/* NEWSLETTER SECTION */}
         {/* ============================================================ */}
-        <section className="py-16 px-4 bg-gradient-to-r from-pink-50 to-yellow-50">
+        <section className="py-16 px-4 bg-linear-to-r from-pink-50 to-yellow-50">
           <div className="container mx-auto max-w-4xl">
             <motion.div
               initial={{ y: 50, opacity: 0 }}
@@ -370,7 +367,7 @@ const HomePage: React.FC = () => {
                 📧
               </motion.div>
               <h3 className="text-3xl md:text-4xl font-cursive mb-4">
-                Subscribe to Our <span className="text-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-orange-500 bg-clip-text text-transparent">Newsletter</span>
+                Subscribe to Our <span className="text-gradient bg-linear-to-r from-pink-500 via-purple-500 to-orange-500 bg-clip-text text-transparent">Newsletter</span>
               </h3>
               <p className="text-gray-600 mb-6 text-lg">
                 Get updates on new cakes, special offers, and baking tips!
@@ -384,7 +381,7 @@ const HomePage: React.FC = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-6 py-3 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 whitespace-nowrap"
+                  className="px-6 py-3 bg-linear-to-r from-pink-500 to-red-500 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 whitespace-nowrap"
                 >
                   Subscribe 🎂
                 </motion.button>
@@ -406,7 +403,7 @@ const HomePage: React.FC = () => {
           whileHover={{ scale: 1.1, rotate: 5 }}
           whileTap={{ scale: 0.9 }}
           onClick={handleOrderNow}
-          className="fixed bottom-6 right-6 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-full p-4 shadow-2xl z-50 hover:shadow-3xl transition-all duration-300"
+          className="fixed bottom-6 right-6 bg-linear-to-r from-pink-500 to-red-500 text-white rounded-full p-4 shadow-2xl z-50 hover:shadow-3xl transition-all duration-300"
           aria-label="Quick Order"
         >
           <span className="text-2xl">🛒</span>
