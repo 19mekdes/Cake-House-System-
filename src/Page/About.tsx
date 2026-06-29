@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';  // ← Add this import
 
-// Import local images
 import natiImage from '../assets/nati.jpg';
 import mekdiImage from '../assets/mekdi.jpg';
 import sarahImage from '../assets/Ayenu.jpg';
@@ -26,15 +25,12 @@ const About: React.FC = () => {
 
   // Navigation Handlers
   const handleOrderNow = () => {
-    navigate('/menu');  // ← Navigate to menu page
+    navigate('/menu');  
   };
 
   const handleContactUs = () => {
     navigate('/contact');  // ← Navigate to contact page (create if needed)
-    // OR if you don't have contact page yet:
-    // alert('Contact page coming soon! 📞');
-    // OR navigate to home:
-    // navigate('/');
+    
   };
 
   const teamMembers: TeamMember[] = [
