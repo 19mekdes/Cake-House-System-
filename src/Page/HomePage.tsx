@@ -1,4 +1,3 @@
-// src/Page/HomePage.tsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -43,9 +42,8 @@ const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-linear-to-br from-pink-50 via-yellow-50 to-rose-50 flex flex-col">
       <main className="grow">
-        {/* ============================================================ */}
+        
         {/* HERO SECTION */}
-        {/* ============================================================ */}
         <section className="relative min-h-screen flex items-center overflow-hidden">
           {/* Background Image */}
           <div 
@@ -182,9 +180,8 @@ const HomePage: React.FC = () => {
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-black/20 to-transparent z-5"></div>
         </section>
 
-        {/* ============================================================ */}
         {/* POPULAR CAKES SECTION - USING MENU DATA */}
-        {/* ============================================================ */}
+        
         <section className="py-16 px-4 bg-white">
           <div className="container mx-auto max-w-6xl">
             <motion.div
