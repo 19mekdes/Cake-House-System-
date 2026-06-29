@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useCart } from '../../context/CartContext';
-
-// Define the comprehensive Cake interface, as requested, to be used globally
 export interface Cake {
   id: number;
   name: string;

@@ -1,10 +1,8 @@
-// src/Page/menu.tsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Card from '../components/cards/card';
 import type { Cake } from '../types';
 
-// ✅ EXPORT this so HomePage can import it
 // eslint-disable-next-line react-refresh/only-export-components
 export const menuItems: Cake[] = [
   { 
