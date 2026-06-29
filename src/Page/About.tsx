@@ -29,8 +29,7 @@ const About: React.FC = () => {
   };
 
   const handleContactUs = () => {
-    navigate('/contact');  // ← Navigate to contact page (create if needed)
-    
+    navigate('/contact');  
   };
 
   const teamMembers: TeamMember[] = [
@@ -357,7 +356,7 @@ const About: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={handleOrderNow}  // ← Navigates to /menu
+                onClick={handleOrderNow}  
                 className="bg-white text-pink-500 px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Order Now
@@ -367,7 +366,7 @@ const About: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={handleContactUs}  // ← Navigates to /contact
+                onClick={handleContactUs}  
                 className="bg-white/20 backdrop-blur-sm text-white px-8 py-3 rounded-full font-semibold border border-white/30 hover:bg-white/30 transition-all duration-300"
               >
                 Contact Us
