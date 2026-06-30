@@ -26,8 +26,7 @@ const Card: React.FC<CardProps> = ({ item, onQuickView }) => {
 
   // Reusable notification logic from FeaturedCakes.tsx (abstracted slightly)
   const handleAddToCart = () => {
-    // You can keep the notification logic in a context or pass a function
-    // For this unified Card, we focus on adding it to the cart state.
+    
     addToCart(item);
   };
 
