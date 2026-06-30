@@ -1,4 +1,3 @@
-// src/Page/Contact.tsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
