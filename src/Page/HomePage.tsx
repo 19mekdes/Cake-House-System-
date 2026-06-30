@@ -293,10 +293,8 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* ============================================================ */}
         {/* NEWSLETTER SECTION */}
-        {/* ============================================================ */}
+        
         <section className="py-16 px-4 bg-linear-to-r from-pink-50 to-yellow-50">
           <div className="container mx-auto max-w-4xl">
             <motion.div
@@ -340,9 +338,8 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        {/* ============================================================ */}
         {/* FLOATING ACTION BUTTON */}
-        {/* ============================================================ */}
+        
         <motion.button
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
