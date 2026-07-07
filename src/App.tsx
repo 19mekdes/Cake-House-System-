@@ -13,7 +13,6 @@ function App() {
         <Nav /> 
         
         <main className="grow">
-          
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/menu" element={<Menu />} />

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Card from '../components/cards/card';
 import type { Cake } from '../types';
-
 // eslint-disable-next-line react-refresh/only-export-components
 export const menuItems: Cake[] = [
   { 

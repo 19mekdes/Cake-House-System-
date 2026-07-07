@@ -10,7 +10,6 @@ const HomePage: React.FC = () => {
   const navigate = useNavigate();
   useCart();
 
-  // Navigation Handlers
   const handleOrderNow = () => {
     navigate('/menu');
   };

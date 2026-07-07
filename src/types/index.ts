@@ -11,7 +11,6 @@ export interface Cake {
   isPopular?: boolean;
   badge?: string | null;
 }
-
 export interface CartItem extends Cake {
   quantity: number;
 }
@@ -24,7 +23,6 @@ export interface Testimonial {
   rating: number;
   avatar: string;
 }
-
 export interface TeamMember {
   id: number;
   name: string;
