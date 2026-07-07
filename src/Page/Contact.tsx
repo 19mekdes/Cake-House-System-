@@ -6,7 +6,6 @@ interface ContactFormData {
   subject: string;
   message: string;
 }
-
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({
     name: '',

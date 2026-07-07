@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import type { Cake } from '../components/cards/card';
- export interface CartItem extends Cake {
+export interface CartItem extends Cake {
   quantity: number;
 }
 interface CartContextType {
