@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useCart } from '../context/CartContext';
 import Card from '../components/cards/card';
-import { menuItems } from './menu';  
+import { menuItems } from './menu';
 import type { Cake } from '../types';
 
 const HomePage: React.FC = () => {
@@ -28,7 +28,6 @@ const HomePage: React.FC = () => {
     navigate(`/cake/${cake.id}`);
   };
 
-  // Get first 4 cakes for homepage preview
   const previewCakes = menuItems.slice(0, 4);
 
   // Testimonials data
@@ -41,11 +40,11 @@ const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-linear-to-br from-pink-50 via-yellow-50 to-rose-50 flex flex-col">
       <main className="grow">
-        
+
         {/* HERO SECTION */}
         <section className="relative min-h-screen flex items-center overflow-hidden">
           {/* Background Image */}
-          <div 
+          <div
             className="absolute inset-0 z-0"
             style={{
               backgroundImage: `url('https://images.unsplash.com/photo-1586788224331-947f68671cf1?w=1920&h=1080&fit=crop&crop=center')`,
@@ -119,7 +118,7 @@ const HomePage: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-lg md:text-xl lg:text-2xl text-white/90 mb-8 max-w-2xl leading-relaxed"
               >
-                Indulge in our handcrafted cakes made with love and the finest ingredients. 
+                Indulge in our handcrafted cakes made with love and the finest ingredients.
                 Every bite tells a story of perfection and passion for baking.
               </motion.p>
 
@@ -179,8 +178,6 @@ const HomePage: React.FC = () => {
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-black/20 to-transparent z-5"></div>
         </section>
 
-        {/* POPULAR CAKES SECTION - USING MENU DATA */}
-        
         <section className="py-16 px-4 bg-white">
           <div className="container mx-auto max-w-6xl">
             <motion.div
@@ -229,9 +226,8 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        {/* ============================================================ */}
         {/* TESTIMONIALS SECTION */}
-        {/* ============================================================ */}
+        
         <section className="py-20 px-4 bg-linear-to-br from-pink-50 via-white to-yellow-50">
           <div className="container mx-auto">
             <motion.div
@@ -293,7 +289,7 @@ const HomePage: React.FC = () => {
           </div>
         </section>
         {/* NEWSLETTER SECTION */}
-        
+
         <section className="py-16 px-4 bg-linear-to-r from-pink-50 to-yellow-50">
           <div className="container mx-auto max-w-4xl">
             <motion.div
@@ -317,8 +313,8 @@ const HomePage: React.FC = () => {
                 Get updates on new cakes, special offers, and baking tips!
               </p>
               <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   placeholder="Enter your email"
                   className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300"
                 />
@@ -338,7 +334,7 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* FLOATING ACTION BUTTON */}
-        
+
         <motion.button
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
