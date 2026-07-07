@@ -24,7 +24,6 @@ const Card: React.FC<CardProps> = ({ item, onQuickView }) => {
   const { addToCart } = useCart();
   const [isHovered, setIsHovered] = useState(false);
 
-  // Reusable notification logic from FeaturedCakes.tsx (abstracted slightly)
   const handleAddToCart = () => {
     
     addToCart(item);
@@ -110,8 +109,6 @@ const Card: React.FC<CardProps> = ({ item, onQuickView }) => {
           <span className="text-xl">❤️</span>
         </motion.button>
       </div>
-
-      {/* Content Area with refined typography */}
       <div className="p-5 grow">
         <h3 className="text-lg font-bold text-gray-800 group-hover:text-pink-500 transition-colors mb-2">
           {item.name}
