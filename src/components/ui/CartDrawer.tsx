@@ -13,7 +13,7 @@ const CartDrawer = ({ onClose }: { onClose: () => void }) => {
           <h2 className="text-2xl font-bold">Your Cart</h2>
           <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-full"><FaTimes /></button>
         </div>
-        
+
         <div className="grow">
           {cart.map((item) => (
             <div key={item.id} className="flex items-center gap-4 mb-4 border-b pb-4">
@@ -21,9 +21,9 @@ const CartDrawer = ({ onClose }: { onClose: () => void }) => {
               <div className="grow">
                 <h4 className="font-semibold">{item.name}</h4>
                 <div className="flex items-center gap-3 mt-2">
-                  <button onClick={() => updateQuantity(item.id, -1)} className="bg-gray-100 p-1 rounded"><FaMinus size={10}/></button>
+                  <button onClick={() => updateQuantity(item.id, -1)} className="bg-gray-100 p-1 rounded"><FaMinus size={10} /></button>
                   <span className="font-bold">{item.quantity}</span>
-                  <button onClick={() => updateQuantity(item.id, 1)} className="bg-gray-100 p-1 rounded"><FaPlus size={10}/></button>
+                  <button onClick={() => updateQuantity(item.id, 1)} className="bg-gray-100 p-1 rounded"><FaPlus size={10} /></button>
                 </div>
               </div>
               <p className="font-bold text-pink-500">${(parseFloat(item.price.replace('$', '')) * item.quantity).toFixed(2)}</p>
