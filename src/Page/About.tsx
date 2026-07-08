@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';  // ← Add this import
-
+import { useNavigate } from 'react-router-dom';  
 import natiImage from '../assets/nati.jpg';
 import mekdiImage from '../assets/mekdi.jpg';
 import sarahImage from '../assets/Ayenu.jpg';
@@ -21,7 +20,7 @@ interface TeamMember {
 }
 
 const About: React.FC = () => {
-  const navigate = useNavigate();  // ← Add this
+  const navigate = useNavigate();  
 
   const handleOrderNow = () => {
     navigate('/menu');  
