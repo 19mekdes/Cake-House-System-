@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useCart } from '../../context/CartContext';
-import CartDrawer from '../ui/CartDrawer'; 
+import CartDrawer from '../ui/CartDrawer';
 
 const Nav: React.FC = () => {
   const { cart } = useCart();
@@ -12,7 +12,7 @@ const Nav: React.FC = () => {
     <>
       <nav className="sticky top-0 bg-white/80 backdrop-blur-md border-b border-pink-100 p-4 shadow-sm z-50">
         <div className="container mx-auto flex justify-between items-center">
-          
+
           {/* Logo */}
           <div className="text-2xl font-bold bg-linear-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
             Cake House
@@ -35,7 +35,7 @@ const Nav: React.FC = () => {
           </ul>
 
           {/* Cart Button */}
-          <button 
+          <button
             onClick={() => setIsOpen(!isOpen)}
             className="relative p-2 text-gray-700 hover:text-pink-500 transition-colors"
           >
