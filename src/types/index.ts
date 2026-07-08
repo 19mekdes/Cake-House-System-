@@ -14,7 +14,6 @@ export interface Cake {
 export interface CartItem extends Cake {
   quantity: number;
 }
-
 export interface Testimonial {
   id: number;
   name: string;
@@ -36,7 +35,6 @@ export interface TeamMember {
     linkedin?: string;
   };
 }
-
 export interface ContactFormData {
   name: string;
   email: string;
