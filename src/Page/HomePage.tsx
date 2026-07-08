@@ -43,7 +43,7 @@ const HomePage: React.FC = () => {
 
         {/* HERO SECTION */}
         <section className="relative min-h-screen flex items-center overflow-hidden">
-          {/* Background Image */}
+      
           <div
             className="absolute inset-0 z-0"
             style={{
