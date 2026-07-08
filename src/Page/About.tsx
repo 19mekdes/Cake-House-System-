@@ -23,7 +23,6 @@ interface TeamMember {
 const About: React.FC = () => {
   const navigate = useNavigate();  // ← Add this
 
-  // Navigation Handlers
   const handleOrderNow = () => {
     navigate('/menu');  
   };
@@ -336,7 +335,7 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section - WITH FUNCTIONALITY */}
+      {/* CTA Section*/}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl">
           <motion.div
