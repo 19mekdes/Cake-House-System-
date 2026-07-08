@@ -4,10 +4,10 @@ import Card from '../components/cards/card';
 import type { Cake } from '../types';
 // eslint-disable-next-line react-refresh/only-export-components
 export const menuItems: Cake[] = [
-  { 
-    id: 1, 
-    name: "Chocolate Dream", 
-    price: "$35.00", 
+  {
+    id: 1,
+    name: "Chocolate Dream",
+    price: "$35.00",
     image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500",
     rating: 4.9,
     reviews: 128,
@@ -16,10 +16,10 @@ export const menuItems: Cake[] = [
     badge: "⭐ Best Seller",
     isPopular: true
   },
-  { 
-    id: 2, 
-    name: "Strawberry Bliss", 
-    price: "$40.00", 
+  {
+    id: 2,
+    name: "Strawberry Bliss",
+    price: "$40.00",
     image: "https://i.pinimg.com/1200x/80/d1/4e/80d14e962568069c2080d10d4c0785fd.jpg",
     rating: 4.8,
     reviews: 96,
@@ -27,20 +27,20 @@ export const menuItems: Cake[] = [
     category: "fruit",
     isNew: true
   },
-  { 
-    id: 3, 
-    name: "Vanilla Paradise", 
-    price: "$30.00", 
+  {
+    id: 3,
+    name: "Vanilla Paradise",
+    price: "$30.00",
     image: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=500",
     rating: 4.7,
     reviews: 84,
     description: "Classic vanilla with buttercream.",
     category: "classic"
   },
-  { 
-    id: 4, 
-    name: "Red Velvet Dream", 
-    price: "$38.00", 
+  {
+    id: 4,
+    name: "Red Velvet Dream",
+    price: "$38.00",
     image: "https://i.pinimg.com/1200x/06/fc/ec/06fcec053100a4d1e79ee28018d528e3.jpg",
     rating: 4.9,
     reviews: 156,
@@ -61,8 +61,8 @@ const Menu: React.FC = () => {
     { id: 'classic', label: 'Classic', icon: '🎀' },
   ];
 
-  const filteredCakes = filter === 'all' 
-    ? menuItems 
+  const filteredCakes = filter === 'all'
+    ? menuItems
     : menuItems.filter(cake => cake.category === filter);
 
   return (
@@ -97,8 +97,8 @@ const Menu: React.FC = () => {
               whileTap={{ scale: 0.95 }}
               onClick={() => setFilter(category.id)}
               className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2
-                ${filter === category.id 
-                  ? 'bg-linear-to-r from-pink-500 to-red-500 text-white shadow-lg shadow-pink-500/30' 
+                ${filter === category.id
+                  ? 'bg-linear-to-r from-pink-500 to-red-500 text-white shadow-lg shadow-pink-500/30'
                   : 'bg-white text-gray-600 hover:bg-pink-50'
                 }`}
             >

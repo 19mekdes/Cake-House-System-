@@ -43,7 +43,7 @@ const HomePage: React.FC = () => {
 
         {/* HERO SECTION */}
         <section className="relative min-h-screen flex items-center overflow-hidden">
-      
+
           <div
             className="absolute inset-0 z-0"
             style={{
@@ -227,7 +227,7 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* TESTIMONIALS SECTION */}
-        
+
         <section className="py-20 px-4 bg-linear-to-br from-pink-50 via-white to-yellow-50">
           <div className="container mx-auto">
             <motion.div

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';  
+import { useNavigate } from 'react-router-dom';
 import natiImage from '../assets/nati.jpg';
 import mekdiImage from '../assets/mekdi.jpg';
 import sarahImage from '../assets/Ayenu.jpg';
@@ -20,14 +20,14 @@ interface TeamMember {
 }
 
 const About: React.FC = () => {
-  const navigate = useNavigate();  
+  const navigate = useNavigate();
 
   const handleOrderNow = () => {
-    navigate('/menu');  
+    navigate('/menu');
   };
 
   const handleContactUs = () => {
-    navigate('/contact');  
+    navigate('/contact');
   };
 
   const teamMembers: TeamMember[] = [
@@ -111,7 +111,7 @@ const About: React.FC = () => {
     <div className="min-h-screen bg-linear-to-br from-pink-50 via-white to-yellow-50">
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 z-0 opacity-10"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1586788224331-947f68671cf1?w=1920&h=400&fit=crop&crop=center')`,
@@ -120,7 +120,7 @@ const About: React.FC = () => {
           }}
         />
         <div className="absolute inset-0 bg-linear-to-r from-pink-50/80 to-yellow-50/80 z-0"></div>
-        
+
         <div className="container mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -140,7 +140,7 @@ const About: React.FC = () => {
               About <span className="text-gradient bg-linear-to-r from-pink-500 via-purple-500 to-orange-500 bg-clip-text text-transparent">Cake House</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We're passionate about creating delicious, handcrafted cakes that bring joy to every occasion. 
+              We're passionate about creating delicious, handcrafted cakes that bring joy to every occasion.
               From birthdays to weddings, we make every celebration special.
             </p>
           </motion.div>
@@ -160,9 +160,9 @@ const About: React.FC = () => {
               <div className="text-5xl mb-4">🎯</div>
               <h2 className="text-3xl font-cursive text-pink-500 mb-4">Our Mission</h2>
               <p className="text-gray-700 leading-relaxed">
-                Our mission is to create unforgettable moments through our handcrafted cakes. 
-                We believe that every celebration deserves a cake that's as special as the 
-                occasion itself. Using only the finest ingredients and traditional baking 
+                Our mission is to create unforgettable moments through our handcrafted cakes.
+                We believe that every celebration deserves a cake that's as special as the
+                occasion itself. Using only the finest ingredients and traditional baking
                 techniques, we bring joy to our customers one slice at a time.
               </p>
             </motion.div>
@@ -176,8 +176,8 @@ const About: React.FC = () => {
               <div className="text-5xl mb-4">👁️</div>
               <h2 className="text-3xl font-cursive text-pink-500 mb-4">Our Vision</h2>
               <p className="text-gray-700 leading-relaxed">
-                To become the most beloved cake house in the city, known for exceptional 
-                quality, innovative designs, and unforgettable taste. We envision a world 
+                To become the most beloved cake house in the city, known for exceptional
+                quality, innovative designs, and unforgettable taste. We envision a world
                 where every celebration is made sweeter with our cakes.
               </p>
             </motion.div>
@@ -199,13 +199,13 @@ const About: React.FC = () => {
                 <div className="text-5xl mb-4">📖</div>
                 <h2 className="text-3xl font-cursive text-pink-500 mb-4">Our Story</h2>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Cake House was founded with a simple dream: to create the most delicious 
-                  and beautiful cakes in the city. What started as a small home bakery has 
+                  Cake House was founded with a simple dream: to create the most delicious
+                  and beautiful cakes in the city. What started as a small home bakery has
                   grown into a beloved local institution.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  Today, we serve hundreds of happy customers every week, creating custom 
-                  cakes for weddings, birthdays, corporate events, and every special moment 
+                  Today, we serve hundreds of happy customers every week, creating custom
+                  cakes for weddings, birthdays, corporate events, and every special moment
                   in between.
                 </p>
               </div>
@@ -301,13 +301,13 @@ const About: React.FC = () => {
                   />
                   <div className="absolute bottom-3 right-3 bg-green-400 rounded-full w-3 h-3 border-2 border-white"></div>
                 </div>
-                
+
                 {/* Content */}
                 <div className="p-6 text-center">
                   <h3 className="text-xl font-bold text-gray-800">{member.name}</h3>
                   <p className="text-pink-500 text-sm font-medium mb-3">{member.role}</p>
                   <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
-                  
+
                   {member.social && (
                     <div className="mt-4 flex justify-center gap-3">
                       {member.social.instagram && (
@@ -354,17 +354,17 @@ const About: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={handleOrderNow}  
+                onClick={handleOrderNow}
                 className="bg-white text-pink-500 px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Order Now
               </motion.button>
-              
+
               {/* Contact Us Button */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={handleContactUs}  
+                onClick={handleContactUs}
                 className="bg-white/20 backdrop-blur-sm text-white px-8 py-3 rounded-full font-semibold border border-white/30 hover:bg-white/30 transition-all duration-300"
               >
                 Contact Us

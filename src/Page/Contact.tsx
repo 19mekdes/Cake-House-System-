@@ -24,14 +24,14 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     await new Promise(resolve => setTimeout(resolve, 1500));
-    
+
     console.log('Form submitted:', formData);
     setSubmitted(true);
     setIsSubmitting(false);
     setFormData({ name: '', email: '', subject: '', message: '' });
-    
+
     // Reset success message after 5 seconds
     setTimeout(() => setSubmitted(false), 5000);
   };
@@ -78,7 +78,7 @@ const Contact: React.FC = () => {
             className="bg-white rounded-2xl shadow-lg p-8"
           >
             <h2 className="text-2xl font-bold mb-6">Send Us a Message 💬</h2>
-            
+
             {submitted && (
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
@@ -175,7 +175,7 @@ const Contact: React.FC = () => {
           >
             <div className="bg-linear-to-br from-pink-50 to-yellow-50 rounded-2xl p-8">
               <h2 className="text-2xl font-bold mb-6">Get in Touch 📬</h2>
-              
+
               {contactInfo.map((info, index) => (
                 <motion.div
                   key={index}
